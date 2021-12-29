@@ -102,13 +102,16 @@ class Servo():
                 (self._pos_neutral - self._pos_min)
             t = self._pwm_neutral - m * self._pos_neutral
             y = m * x + t
+            
         elif x == self._pos_neutral:
             y = self._pwm_neutral
+            
         else:
             m = (self._pwm_max - self._pwm_neutral) / \
                 (self._pos_max - self._pos_neutral)
             t = self._pwm_neutral - m * self._pos_neutral
             y = m * x + t
+            
         y = round(y)
         y = int(y)
         return y
@@ -121,6 +124,7 @@ class Servo():
             self._pos_current = pos
             new_pwm = self._calculate_pwm(pos)
             self.set_pwm(new_pwm)
+            
         else:
             raise ValueError("ValueError: Ungültiger pos Parameterwert: pos_requested: {pos_requested}, pos_current: {pos_current}, pos_min: {pos_min}, pos_max: {pos_max}".format(
                 pos_requested=pos,

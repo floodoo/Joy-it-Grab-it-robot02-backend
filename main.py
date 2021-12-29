@@ -1,6 +1,4 @@
 #!/usr/bin/python3
+from app.robot import Robot
 
-from logic.roboter import Roboter
-
-# Startet die Roboter Klasse
-Roboter()
+Robot()
