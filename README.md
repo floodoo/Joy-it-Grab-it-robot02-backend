@@ -2,6 +2,7 @@
 The backend for the Joy-it-Grab-it-robot02 robot arm. You can use it with my [Flutter app](https://github.com/floodoo/Joy-it-Grab-it-robot02-frontend).
 
 ## Installation
+Install the backend on your raspberry pi with the [MOTOPI](https://joy-it.net/de/products/RB-Moto3) board.
 ### Install dependencies
 `sudo pip3 install -r requirements/requirements.txt`
 ## Configuration
@@ -27,13 +28,13 @@ pwm_min, pwm_max and pwm_neutral are the values for the servos. Change these val
 ### Add API endpoint to the frontend
 After you run the `main.py`, you can see the API endpoint in your terminal:
 ```bash
- * Serving Flask app 'app.robot' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://xxx.xxx.xxx.xx:5000/ (Press CTRL+C to quit)
+* Serving Flask app 'app.robot' (lazy loading)
+* Environment: production
+  WARNING: This is a development server. Do not use it in a production deployment.
+  Use a production WSGI server instead.
+* Debug mode: off
+* Running on all addresses.
+  WARNING: This is a development server. Do not use it in a production deployment.
+* Running on http://xxx.xxx.xxx.xx:5000/ (Press CTRL+C to quit)
 ```
 Then you have to add the API endpoint to the [app](https://github.com/floodoo/Joy-it-Grab-it-robot02-frontend#select-your-api-endpoint).
