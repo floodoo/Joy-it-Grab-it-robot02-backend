@@ -18,7 +18,7 @@ class RobotResource(Resource):
             cls._pwm.set_pwm_freq(50)
             cls.sequence = Sequence()
 
-            config_file = open("backend/roboconfig.json")
+            config_file = open("app/roboconfig.json")
 
             cls._config = json.load(config_file)
 
